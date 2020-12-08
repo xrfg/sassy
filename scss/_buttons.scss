@@ -1,0 +1,15 @@
+%btn {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+}
+
+.btn__primary {
+  @extend %btn;
+  background-color: $clr-primary;
+}
+.btn__secondary {
+  @extend %btn;
+  background-color: $clr-secondary;
+}
