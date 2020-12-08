@@ -7,9 +7,11 @@
 
 .btn__primary {
   @extend %btn;
-  background-color: $clr-primary;
+  /* background-color: $clr-primary; */
+  @include set-background(lighten($clr-primary, 10%));
 }
 .btn__secondary {
   @extend %btn;
-  background-color: $clr-secondary;
+  /* background-color: $clr-secondary; */
+  @include set-background($clr-secondary);
 }

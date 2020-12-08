@@ -1,7 +1,21 @@
 $clr-primary: violet;
-$clr-secondary: orange;
+$clr-secondary: rgb(173, 94, 219);
 $clr-light: lightblue;
 $clr-dark: darkblue;
+
+// set text color based on background color //
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return $clr-dark;
+  }
+  @return $clr-light;
+}
+
+// set background and text color //
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
 
 *,
 *::before,

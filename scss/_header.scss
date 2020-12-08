@@ -1,4 +1,5 @@
 .showcase {
+  @include set-background($clr-primary);
   height: 600px;
 
   nav {
@@ -20,7 +21,7 @@
   }
 
   a {
-    color: $clr-light;
+    color: set-text-color($clr-light);
   }
 
   &__content {

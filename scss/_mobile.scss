@@ -1,0 +1,42 @@
+/* @media (max-width: 700px) {
+  .showcase {
+    height: 400px;
+
+    &__content {
+      text-align: center;
+
+      img {
+        display: none;
+      }
+    }
+  }
+} */
+
+$mobile: 700px;
+$tablet: 1200px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@include mobile {
+  .showcase {
+    height: 400px;
+
+    &__content {
+      text-align: center;
+
+      img {
+        display: none;
+      }
+    }
+  }
+}
